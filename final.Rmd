@@ -1,0 +1,282 @@
+---
+title: "The Behavior of Visitors from Turkey"
+author: 
+  - Hussein, Hesham
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{english}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+abstract: |
+   The point of this study  is to investigate the relationship of inflation immigration and  social issues in Turkey ,amid the period from 2003 to 2019, and to try to understand the relationship between the three keys above and  the number of Turkish visitors who travel to European nations. This theme was chosen due to the vital financial and social changes that Turkey seen amid this period.Examination of accessible information and data shows that the tall expansion rates in Turkey amid this period had a critical affect on the economy and society. The tall fetched of living and trade rate variances have caused a decay within the obtaining control of Turkish citizens. And the expanding financial weights on families and people within the nation, which influenced their money related choices and their capacity to travel to European nations.In expansion, amid this period, Turkey seen noteworthy movement shifts, as the number of foreigners and outcasts entering the nation expanded. This relocation move driven to social and financial changes in Turkey, counting its affect on the tourism industry.The think about concluded that the increment in Infilation  rates and the affect of movement and social issues had a negative affect on the number of Turkish visitors  traveling to European nations amid that period. The tall costs of travel and the deterioration of obtaining control driven to a decay within the crave of Turkish visitor to travel to European nations, whereas the interest in neighborhood traveler goals to other nations expanded.
+   KEY WORDS: Inflaion Visitors USA Europe Migration Turkey- Visiting Relationship
+
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+[^1]: 19080715, [Github Repo](https://github.com/Hisham40/final.git)
+
+
+
+
+# Introduction
+Turkey, as one of the countries with economic and social dynamism, is witnessing significant transformations from 2003 to 2019. The country has been affected by multiple changes related to inflation and migration.
+
+The problem of inflation is one of the main challenges facing Turkey in that period of time, specifically after 2016, the high rates of inflation witnessed a significant impact on the purchasing power of citizens and living conditions. The cost of living increased and the currency depreciated, worsening the financial conditions of families and individuals in the country. As a result, the interest of Turkish tourists to travel to European countries was affected, as the number of Turkish tourists choosing those tourist destinations decreased.
+
+In addition to the large inflation that occurred, the rates of immigration to Turkey increased in the same period, which had an impact on the rates of acceptance of visas.
+
+In addition, some eyes are turning to border countries such as Georgia, Greece and Bulgaria. This trend is affected by social, economic and geographical factors, as these countries are geographically close to Turkey and enjoy easy access to it.
+
+Understanding the relationship of inflation and immigration in Turkey contributes to directing public policies and measures to deal with the challenges of the economy and immigration and to enhance living and economic conditions in the country. Understanding the travel and relocation behavior of Turkish citizens is also vital for operators in the tourism industry and decision makers to work to enhance national and regional tourism and achieve economic growth.
+Therefore, it is important to understand the relationship between the inflation occurring in Turkey and its relationship to the decrease in the number of visitors to Europe, specifically the countries whose currency value is higher than the value of the Turkish lira. low currency.
+
+## Literature Review
+
+This literary audit addresses the correlation between the decline in the number of Turkish visitors to European countries, the growing swelling, and the waves of illegal migration. This firm relationship demonstrates the impact of those variables on Turkish residents' travel and movement behavior, and it also determines the setting of financial and social interactions between Turkey and the European Union nations.
+The Turkish lira's depreciation, the growth in generation costs, and changes in financial practices. Citizens' acquiring control was altered as the costs of goods and services increased dramatically, resulting in a decline in investment and its impact on customers.[@turna2021relationship]
+
+
+Turkey, on the other hand, has seen a large wave of migration from Syria since 2011. Millions of Syrians have fled to Turkey in look of security and assurance from the continuous strife in their nation. This expansive wave of movement and the nonstop convergence of Syrian displaced people. [@tastan2020low]
+
+These components associated in common impact shaping a complex framework. The expanding expansion in Turkey fortifies the monetary weights on citizens and influences the acquiring control of individuals, which eventually leads to a diminish within the number of Turkish guests who select to travel to European nations. The tall costs of travel and convenience in these goals, given the quality of their monetary standards, may moreover be an affecting calculate in making travel choices.[@taskinsoy2019turkish]
+
+However, the waves of illicit migration to Turkey, and the increment within the number of Turkish foreigners looking for to immigrate to the Joined together States and the European Union, fortify the social and financial pressure within the nation. Numerous Turks resort to looking for refuge after coming to these goals, which influences the extent of Turkish guests who select to travel to European nations.[@iccduygu2018afghan]
+
+The previously mentioned variables fortify the introduction of Turkish guests towards border nations such as Azerbaijan, Iran and Bulgaria. The accessibility of simple get to to these geological goals near to Turkey, in expansion to the cheapening of their monetary standards, shows the interest of Turkish guests to visit them.
+
+This writing survey summarizes the complex relationship between the decrease within the number of Turkish guests to European nations, the expanding swelling in Turkey, and the waves of movement. Her experiences outline the exchange of these components and their affect on the travel and movement behavior of Turkish citizens.[@turner2019immigration]
+
+# Data
+The data used for this analysis are from TUIK. This data covers the last 17 years and consists of 17 observers and 25 variables. For the purpose of this study, data from the last 17 years are analyzed annually. The variables include USA, Germany, Australia, Austria, Azerbaijan, Belgium, Bulgaria, Denmark, France, Georgia, Netherlands, England, Iran, Spain, Israel, Sweden, Switzerland, Italy, Japan, Canada, Russia, Syria, Tunisia, Ukraine, and Greece. An attempt was made to select these variables from around the world and analyze the number of citizens going abroad by different countries, taking into account factors such as inflation and external migration to Turkey. The statistical summary of the data can be found in Table 1:
+```{r include=FALSE}
+years <- as.Date(paste0(2003:2019, "-01-01"))
+years <- as.Date(paste0(years, "-01"), format = "%Y-%m-%d")
+
+  Total <- c(3658655, 4306398, 4524060, 4378982, 5401907, 5215235, 5885001, 6888114, 6751578, 6274997, 8011654, 8363966, 9256486, 8062065, 9440457, 8657219, 9907838)
+
+  USA <- c(140805, 173886, 179808, 150773, 242778, 205491, 233372, 235389, 234228, 150960, 103753, 119206, 251903, 313654, 157896, 155198, 130032)
+  
+  Germany <- c(317600, 343930, 299091, 369347, 437118, 408927, 474840, 549198, 425428, 383472, 315384, 493592, 477927, 531933, 452412, 347638, 412216)
+  
+  Australia <- c(2374, 2996, 3977, 363, 1884, 2272, 5279, 6681, 12366, 12594, 9066, 5985, 4983, 10619, 12393, 11298, 12324)
+  
+  Austria <- c(46921, 43956, 35409, 45121, 67523, 63511, 47012, 74449, 75511, 72423, 51387, 75229, 59078, 81899, 124976, 49303, 90029)
+  
+  Azerbaijan <- c(131665, 140619, 199653, 147244, 200182, 192680, 335311, 335995, 394132, 437657, 365167, 235736, 212308, 212274, 256138, 222599, 275488)
+  
+  Belgium <- c(23538, 43366, 51384, 55960, 52723, 33193, 51381, 48549, 52959, 38170, 8279, 18673, 34735, 43672, 66322, 18028, 45238)
+  
+  Bulgaria <- c(612632, 607381, 711540, 581397, 716675, 749342, 809622, 988616, 714360, 664946, 653640, 620896, 659140, 782997, 807645, 843916, 1083150)
+  
+  Denmark <- c(8589, 10601, 3960, 9363, 13951, 3649, 9144, 6342, 7115, 6145, 4557, 7944, 1882, 14286, 10018, 4395, 24741)
+  
+  France <- c(63802, 106188, 80962, 70909, 103935, 74242, 65687, 92973, 98459, 118241, 166466, 136912, 167302, 136086, 143845, 161556, 189659)
+  
+  Georgia <- c(2746, 2012, 54626, 57224, 117056, 224877, 136459, 121891, 130976, 168527, 107904, 105405, 112244, 98068, 119820, 148937, 134935)
+  
+  Netherlands <- c(52718, 45772, 48676, 43405, 59258, 52856, 45378, 43520, 52210, 46314, 30153, 51032, 67652, 79230, 81023, 89538, 79989)
+  
+UnitedKingdom <- c(39756, 52301, 31981, 59063, 67341, 66033, 71164, 81257, 79348, 64547, 81140, 99371, 105138, 77603, 81521, 64767, 60980)
+
+  Iran <- c(181422, 255134, 209790, 128832, 126126, 149540, 139268, 173511, 162090, 169897, 174543, 256892, 222460, 212074, 154451, 166351, 165986)
+  
+  Spain <- c(27466, 48482, 29704, 32163, 52247, 22428, 33943, 32822, 27056, 22774, 37779, 57272, 76809, 106970, 64484, 58885, 53074)
+  
+  Israel <- c(3585, 14825, 11880, 5607, 42312, 6960, 36850, 49760, 22869, 33945, 22616, 36496, 50944, 65362, 29923, 30184, 30663)
+  
+  Sweden <- c(8858, 7973, 4404, 1875, 5297, 6960, 4211, 4754, 4573, 3891, 2307, 4857, 4856, 4905, 6291, 6001, 6743)
+  
+  Switzerland <- c(29904, 35449, 34305, 24420, 43078, 37788, 45907, 53207, 53749, 39584, 35952, 64946, 53514, 46974, 50813, 54762, 60141)
+  
+  Italy <- c(89889, 128398, 86914, 102405, 117709, 99102, 94750, 107476, 101420, 107806, 94684, 104603, 117165, 106021, 106636, 103903, 101098)
+  
+  Japan <- c(3383, 1476, 492, 867, 1768, 696, 504, 558, 597, 300, 285, 1326, 1442, 1818, 2045, 1716, 1734)
+  
+  Canada <- c(11452, 9966, 10665, 17742, 14215, 9326, 10795, 10010, 12129, 10165, 9052, 22748, 24678, 19672, 23465, 20165, 25849)
+  
+russia <- c(109493, 158099, 140158, 139264, 182644, 202572, 167871, 189827, 118563, 110359, 114966, 143448, 169302, 83375, 73399, 95166, 84738)
+
+syria <- c(259581, 445980, 405593, 348914, 471395, 425313, 517365, 653370, 1002779, 473862, 1880, 654, 634, NA, NA, NA, NA)
+
+tunisia <- c(2169, 3717, 3447, 9493, 3662, 18200, 9671, 4066, NA, 1100, 533, 4637, 8472, 13143, 17020, 5360, 25190)
+
+ukraine <- c(35245, 54299, 70212, 67222, 142753, 124380, 110811, 105231, 83151, 66813, 89474, 59163, 91210, 114593, 168911, 192421, 217113)
+
+greece <- c(170019, 185422, 141380, 241987, 305666, 263048, 277540, 428721, 345653, 447908, 598936, 741037, 898919, 785905, 921262, 781753, 789315)
+```
+
+
+```{r include=FALSE}
+years <- as.Date(paste0(2003:2019, "-01-01"))
+years <- as.Date(paste0(years, "-01"), format = "%Y-%m-%d")
+
+data <- data.frame(
+  Year = years,
+  Total = Total,
+  USA = USA,
+  Germany = Germany,
+  Australia = Australia,
+  Austria = Austria,
+  Azerbaijan = Azerbaijan,
+  Belgium = Belgium,
+  Bulgaria = Bulgaria,
+  Denmark = Denmark,
+  France = France,
+  Georgia = Georgia,
+  Netherlands = Netherlands ,
+UnitedKingdom = UnitedKingdom,
+  Iran = Iran,
+  Spain = Spain,
+  Israel = Israel,
+  Sweden = Sweden,
+  Switzerland = Switzerland,
+  Italy = Italy ,
+  Japan = Japan,
+  Canada = Canada,
+russia = russia,
+syria = syria,
+tunisia = tunisia,
+ukraine = ukraine,
+greece = greece )
+
+```
+
+```{r include=FALSE}
+
+data_without_years <- data[, !colnames(data) %in% "Date"]
+summary_table <- data.frame(
+  Mean = sapply(data_without_years, mean),
+  StandardDeviation = sapply(data_without_years, sd),
+  Minimum = sapply(data_without_years, min),
+  Maximum = sapply(data_without_years, max)
+)
+
+```
+
+```{r echo=FALSE}
+library(kableExtra)
+kable(summary_table, caption = "Summary Statistics", format = "markdown")
+```
+
+
+
+
+
+
+
+
+# Methods and Data Analysis
+## Data Analysis
+
+Plot 1 shows the number of visitors Italy, the Netherlands, Spain, and Sweden have received from Turkey over the past 17 years, according to TurkStat data. Between 2006 and 2007, there was a sharp increase in the number of visitors in all four countries. While the number of visitors in Italy, the Netherlands and Spain fluctuated between 2007 and 2011, the number of visitors in Sweden is more stable. From 2011 to 2012, a significant decrease in the number of visitors from Turkey was observed in all four countries. Between 2014 and 2016, a sharp increase in the number of visitors from Turkey was again observed in these four countries. Finally, it is noted that these four countries recorded the highest number of visitors between 2016 and 2017. Although there are fluctuations in the following years, the numbers for all four countries are generally decreasing.
+
+
+```{r echo=FALSE, fig.height=4, fig.width=6}
+
+dataeurope <- subset(data, years >= as.Date("2003-01-01") & years <= as.Date("2019-01-01"))
+library(ggplot2)
+
+ggplot(dataeurope, aes(x = years)) +
+  geom_line(aes(y = UnitedKingdom, color = "spain")) +
+  geom_line(aes(y = Sweden, color = "sweden")) +
+  geom_line(aes(y = Italy, color = "italy")) +
+  geom_line(aes(y = Netherlands, color = "Netherlands")) +
+  labs(x = "years", y = "countries", color = "Category", title = "plot 1: Europe countries") +
+  scale_color_manual(values = c("blue", "purple", "black", "red")) +
+  theme(axis.text = element_text(size = 6))
+
+
+```
+\newpage
+Figures 1, 2, 3, and 4 show the number of visitors from Turkey to Bulgaria, Georgia, and Azerbaijan, respectively, and the inflation rates for the last six years. Although there were fluctuations in the inflation rate between 2014 and 2015, a general decrease was observed, and although the number of visitors increased in Bulgaria, the number of visitors decreased in Azerbaijan and Georgia. Between 2015 and 2016, there was a general increase in the inflation rate, again with fluctuations. Also in these years, the number of visitors in Bulgaria and Georgia increased, while the number of visitors in Azerbaijan decreased. Although there was a general decrease in the inflation rate between 2016and 2018, the number of visitors increased in Azerbaijan and Bulgaria, while the number of visitors decreased sharply in Georgia. Finally, between 2018 and 2019, a general increase in the inflation rate and a sharp increase in the number of visitors were observed in all three countries.
+
+```{r echo=FALSE, fig.height=3, fig.width=3}
+
+library(ggplot2)
+
+
+plot(years, Bulgaria, type = "l", xlab = "Years", ylab = "The Number of Visitors",
+     main = "Figure 1: Bulgaria", xlim = c(min(years), max(years)))
+
+
+plot(years, Georgia, type = "l", xlab = "Years", ylab = "The Number of Visitors",
+     main = "Figure 2: Georgia", xlim = c(min(years), max(years)))
+
+
+plot(years, Azerbaijan, type = "l", xlab = "Years", ylab = "The Number of Visitors",
+     main = "Figure 3: Azerbaijan", xlim = c(min(years), max(years)))
+
+
+Date <- c("2019-12", "2019-11", "2019-10", "2019-09", "2019-08", "2019-07", "2019-06", "2019-05", "2019-04", "2019-03", "2019-02", "2019-01", "2018-12", "2018-11", "2018-10", "2018-09", "2018-08", "2018-07", "2018-06", "2018-05", "2018-04", "2018-03", "2018-02", "2018-01", "2017-12", "2017-11", "2017-10", "2017-09", "2017-08", "2017-07", "2017-06", "2017-05", "2017-04", "2017-03", "2017-02", "2017-01", "2016-12", "2016-11", "2016-10", "2016-09", "2016-08", "2016-07", "2016-06", "2016-05", "2016-04", "2016-03", "2016-02", "2016-01", "2015-12", "2015-11", "2015-10", "2015-09", "2015-08", "2015-07", "2015-06", "2015-05", "2015-04", "2015-03", "2015-02", "2015-01", "2014-12", "2014-11", "2014-10", "2014-09", "2014-08", "2014-07", "2014-06", "2014-05", "2014-04", "2014-03", "2014-02", "2014-01")
+
+Date <- as.Date(paste0(Date, "-01"), format = "%Y-%m-%d")
+  TÜFE <- c(0.74, 0.38, 2, 0.99, 0.86, 1.36, 0.03, 0.95, 1.69, 1.03, 0.16, 1.06, -0.40, -1.44, 2.67, 6.30, 2.30, 0.55, 2.61, 1.62, 1.87, 0.99, 0.73, 1.02, 0.69, 1.49, 2.08, 0.65, 0.52, 0.15, -0.27, 0.45, 1.31, 1.02, 0.81, 2.46, 1.64, 0.52, 1.44, 0.18, -0.29, 1.16, 0.47, 0.58, 0.78, -0.04, -0.02, 1.82, 0.21, 0.67, 1.55, 0.89, 0.40, 0.09, -0.51, 0.56, 1.63, 1.19, 0.71, 1.10, -0.44, 0.18, 1.90, 0.14, 0.09, 0.45, 0.31, 0.4, 1.34, 1.13, 0.43, 1.98)
+  enflasyon <- data.frame(Date = Date, TÜFE = TÜFE)
+library(ggplot2)
+plot(Date, TÜFE, type = "l", xlab = "Date", ylab = "inflation rate", 
+     main = "figure 4: inflation rate", xlim = c(min(Date), max(Date)))
+
+
+par(mar = c(4, 4, 2, 2))
+
+```
+\newpage
+
+## Methods
+A correlation test was also performed to understand the relationships between the variables. The data used is a dataset that shows the number of visitors from Turkey abroad and their relationships with each other. The results are as follows:
+```{r echo=FALSE, fig.height=4, fig.width=5}
+ 
+library(corrplot)
+cor_matrix <- cor(data[,-1])
+corrplot(cor_matrix, method = "circle", tl.col = "black", tl.cex = 0.7)
+
+
+```
+
+
+
+Correlation coefficients between 0.4 and 0.6 in the blues of the table show moderate correlation. In this case, we can say that there is a relationship between the variables, but it is neither too strong nor too weak. In other words, there is a relationship between the variables, but this relationship is moderate.
+
+
+
+
+
+
+
+
+# Conclusion
+In this study, the effect of the factors that cause a change in visits from Turkey to abroad was investigated. In this context, various literature reviews were used to understand the factors that influence the demand for foreign visits in Turkey. The data was taken from the website TUIK and various charts were created using this data to facilitate the understanding and observation of the data. Based on the quantitative and qualitative methods used in the study, various analyzes were conducted. The main results of these analyzes are as follows:
+
+Recently, it has been noted that the flow of visitors to European countries has decreased. During the periods when a decrease was observed, an increase in the waves of migration to Turkey was also noted.
+
+Although the number of visitors from Turkey generally increased to countries with relatively low travel costs during periods of increased inflation, it decreased in some periods, so no clear conclusion could be drawn.
+
+Based on the data obtained from the correlation test, we cannot determine exactly how the number of visitors from Turkey abroad has changed and what factors have contributed to this change, since only the correlations between countries are given in the table. These relationships do not provide information about the factors that influence the change in the number of visitors. For this, other factors must be taken into account.
+This study examined how the number of visitors from Turkey abroad has changed over the past 17 years and what factors have contributed to this change. Two factors, namely inflation rate and external migration to Turkey, guided the data study. Insufficient results could be obtained about illegal migration and international relations mentioned in the literature study, so these factors can be further explored and the scope of the research can be expanded to develop this study. . In addition, it should be noted that the results cannot be generalized because the study covers 25 randomly selected countries around the world. To reach a more comprehensive result worldwide, studies with more data can be conducted, and micro studies can be conducted to support these studies.
+
+
+\newpage
+# References {#references}
+<div id="refs"></div>
+
+
